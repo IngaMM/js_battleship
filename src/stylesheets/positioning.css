@@ -1,0 +1,58 @@
+#posGridContainer {
+  display: grid;
+  width: 400px;
+  height: 400px;
+  grid-template-columns: repeat(10, 1fr);
+  border: 1px solid black;
+  margin: auto;
+}
+
+.posField {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.posUnsunkenShip {
+  background-color: rgba(0%, 0%, 100%, 0.25);
+  cursor: pointer;
+}
+
+.moreTransparent {
+  background-color: rgba(0%, 0%, 100%, 0.15);
+}
+
+.length1.hor,
+.length1.vert {
+  width: 105%;
+  height: 105%;
+}
+
+.length2.hor {
+  width: 210%;
+  height: 105%;
+}
+
+.length3.hor {
+  width: 315%;
+  height: 105%;
+}
+
+.length4.hor {
+  width: 420%;
+  height: 105%;
+}
+
+.length2.vert {
+  height: 210%;
+  width: 105%;
+}
+
+.length3.vert {
+  height: 315%;
+  width: 105%;
+}
+
+.length4.vert {
+  height: 420%;
+  width: 105%;
+}

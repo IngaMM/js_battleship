@@ -1,0 +1,22 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "jest": {
+      "testDirectoryName": "tests"
+    }
+  },
+  "keywords": [],
+  "author": "Inga",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
