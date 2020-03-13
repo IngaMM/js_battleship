@@ -19,3 +19,5 @@ Parts of it were written with the technique of TDD (test-driven-development). DO
 
 Requirements
 Browser
+
+Background image by Ivana Cajina on Unsplash

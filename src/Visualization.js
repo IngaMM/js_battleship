@@ -13,7 +13,9 @@ class Visualization {
     positionShips();
 
     let button = document.createElement("button");
+    let buttonContainer = document.createElement("div");
     button.id = "btnConfirm";
+    buttonContainer.id = "buttonContainer";
     button.innerHTML = "Confirm position";
     if (player === "Player1" && game.player2.isComputer === false) {
       // Allow Player 2 to choose the position of the ships
@@ -41,7 +43,9 @@ class Visualization {
         });
       });
     }
-    positioningScreen.appendChild(button);
+
+    positioningScreen.appendChild(buttonContainer);
+    buttonContainer.appendChild(button);
   }
 
   preparePositioningScreen(player) {
@@ -49,6 +53,7 @@ class Visualization {
     selectComputerScreen.classList.add("invisible");
 
     let positioningScreen = document.getElementById("positioningScreen");
+
     positioningScreen.classList.remove("invisible");
     // Delete all children
     while (positioningScreen.firstChild) {
@@ -57,8 +62,7 @@ class Visualization {
 
     let posInfo = document.createElement("h2");
     posInfo.id = "posInfo";
-    posInfo.innerHTML =
-      player + ": Position the ships (drag & drop and doubleclick for turning)";
+    posInfo.innerHTML = player + ": Position the ships";
     positioningScreen.appendChild(posInfo);
 
     let posGridContainer = document.createElement("div");
@@ -188,6 +192,9 @@ class Visualization {
         playerTurn +
         "'s turn. Shoot by clicking in the Enemy Gameboard.";
     } else {
+      announcement.style.backgroundColor = "lightgreen";
+      announcement.style.fontSize = "3em";
+      announcement.style.color = "black";
       if (game.player1.isWinner === true) {
         announcement.innerHTML = "Game over! Player1 is the winner";
       } else if (game.player2.isWinner === true) {

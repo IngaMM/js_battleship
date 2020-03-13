@@ -1,52 +1,71 @@
 body {
-  margin: 0;
+  background: url(../pictures/sea.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: lightgray;
 }
 
-#formSelectComputer {
-  position: absolute;
-  width: 490px;
-  left: 50%;
-  margin-left: -245px;
-  top: 80px;
+#screen,
+#positioningScreen,
+#passDeviceScreen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.5em;
+  width: 90%;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+#selectComputerScreen {
+  font-size: 2em;
+  width: 90%;
+  text-align: center;
 }
 
 #labelSelectComputer {
-  font-size: 25px;
+  font-size: 0.8em;
+}
+
+#formSelectComputer {
+  margin-bottom: 1em;
 }
 
 #selectComputer {
-  position: absolute;
+  position: relative;
   transform: scale(2);
-  top: 8px;
-  right: 25px;
+  bottom: 0.5em;
+  right: 0.8em;
 }
 
 #btnStartGame,
 #btnConfirm,
 #btnPassDevice {
-  position: absolute;
-  display: block;
   border-radius: 5px;
   font-size: 30px;
-  left: 50%;
-  background-color: gray;
-}
-
-#btnStartGame {
-  top: 160px;
-  width: 164px;
-  margin-left: -82px;
-}
-
-#btnConfirm {
-  top: 550px;
-  width: 250px;
-  margin-left: -125px;
+  background-color: lightgray;
 }
 
 #gameboardContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.own,
+.enemy {
+  background-color: lightgray;
+}
+
+#headerPlayer1EnemyGameboard,
+#headerPlayer2EnemyGameboard,
+#headerPlayer1OwnGameboard,
+#headerPlayer2OwnGameboard {
+  font-size: 2.75em;
 }
 
 @media all and (max-width: 900px) {
@@ -96,10 +115,11 @@ body {
   }
 }
 
-h1,
 h2 {
   margin-bottom: 10px;
   text-align: center;
+  font-size: 2em;
+  width: 100%;
 }
 
 .board {
@@ -116,18 +136,29 @@ td {
   text-align: center;
 }
 
+@media all and (max-width: 450px) {
+  td {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .isTurn {
   cursor: pointer;
 }
 
 .unsunkenShip {
-  background-color: rgba(0%, 0%, 100%, 0.25);
+  background-color: rgba(0%, 0%, 100%);
 }
 
 .sunkenShip {
-  background-color: rgba(100%, 0%, 0%, 0.25);
+  background-color: rgba(100%, 0%, 0%);
+}
+
+table {
+  color: black;
 }
 
 .invisible {
-  display: none;
+  display: none !important;
 }

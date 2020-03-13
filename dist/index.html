@@ -2,28 +2,37 @@
 <html>
   <head>
     <title>Battleship</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/stylesheets/reset.css" />
     <link rel="stylesheet" href="../src/stylesheets/main.css" />
     <link rel="stylesheet" href="../src/stylesheets/positioning.css" />
   </head>
   <body>
-    <h1>Battleship</h1>
-    <div id="selectComputerScreen">
-      <div id="formSelectComputer">
-        <label for="selectComputer" id="labelSelectComputer"
-          >Should Player2 be played by the computer?</label
-        >
-        <input type="checkbox" id="selectComputer" name="selectComputer" />
+    <div id="screen">
+      <h1>Battleship</h1>
+      <div id="selectComputerScreen">
+        <form id="formSelectComputer">
+          <div>
+            <label id="labelSelectComputer"
+              ><input
+                type="checkbox"
+                id="selectComputer"
+                name="selectComputer"
+              />Should Player2 be played by the computer?</label
+            >
+          </div>
+        </form>
+        <button id="btnStartGame">Start Game</button>
       </div>
-      <button id="btnStartGame">Start Game</button>
-    </div>
-    <div id="positioningScreen" class="invisible"></div>
-    <div id="playScreen" class="invisible">
-      <h2 id="announcement"></h2>
-      <div id="gameboardContainer"></div>
-    </div>
-    <div id="passDeviceScreen" class="invisible">
-      <h2>Pass the device to the other player and click ok!</h2>
-      <button id="btnPassDevice">ok</button>
+      <div id="positioningScreen" class="invisible"></div>
+      <div id="playScreen" class="invisible">
+        <h2 id="announcement"></h2>
+        <div id="gameboardContainer"></div>
+      </div>
+      <div id="passDeviceScreen" class="invisible">
+        <h2>Pass the device to the other player and click ok!</h2>
+        <button id="btnPassDevice">ok</button>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
