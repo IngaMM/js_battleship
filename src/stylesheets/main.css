@@ -38,10 +38,10 @@ h1 {
 
 #selectComputer {
   position: relative;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
   bottom: 0.5em;
   right: 0.8em;
 }
@@ -168,4 +168,8 @@ table {
 
 .invisible {
   display: none !important;
+}
+
+#announcement {
+  border-radius: 10px;
 }
